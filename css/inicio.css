@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.form-container {
+    margin-bottom: 30px;
+}
+
+input[type="text"], input[type="submit"], select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 20px 0;
+}
+
+.stream-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.stream-item {
+    width: 30%;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.stream-item:hover {
+    background-color: #f1f1f1;
+}
+
+.stream-item h4 {
+    text-align: center;
+}
