@@ -27,11 +27,11 @@
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand mt-2 mb-2" href="index.html">SEGURIDAD en <b>ACCIÓN</b></a>
+                    <a class="navbar-brand mt-2 mb-2" href="index.php">SEGURIDAD en <b>ACCIÓN</b></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Inicio</a>
+                                <a class="nav-link" href="index.php">Inicio</a>
                             </li>
                             <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ultimas Noticias</a>
@@ -368,28 +368,27 @@
                                                         </div>
                                                     </div>
                                                     
-                                                </div><!-- end tab-details -->
-                                            </div><!-- end mega-menu-content -->
+                                                </div>
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-01.html">Seguridad Corporativa</a>
+                                <a class="nav-link" href="noticias_seguridad.php">Seguridad Corporativa</a>
                             </li>                   
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-02.html">Videos</a>
+                                <a class="nav-link" href="videos_seguridad.php">Videos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-03.html">Reseñas y Articulos</a>
+                                <a class="nav-link" href="articulos_seguridad.php">Reseñas y Articulos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="trasmisiones.php">Trasmisiones en Linea</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-contact.html">Contáctanos</a>
+                                <a class="nav-link" href="contactos.php">Contáctanos</a>
                             </li>
-                            
                         </ul>
                         <ul class="navbar-nav mr-2">
                             <li class="nav-item">
@@ -404,8 +403,8 @@
                         </ul>
                     </div>
                 </nav>
-            </div><!-- end container-fluid -->
-        </header><!-- end market-header -->
+            </div>
+        </header>
 
         <section class="section first-section">
             <div class="container-fluid">
@@ -420,11 +419,11 @@
                                         <h4><a href="tech-single.html" title="">La importancia de la videovigilancia en la protección empresarial</a></h4>
                                         <small><a href="tech-single.html" title="">24 Julio, 2024</a></small>
                                         <small><a href="tech-author.html" title="">por Amanda</a></small>
-                                    </div><!-- end meta -->
-                                </div><!-- end shadow-desc -->
-                            </div><!-- end shadow -->
-                        </div><!-- end post-media -->
-                    </div><!-- end first-slot -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         
                     <div class="second-slot">
                         <div class="masonry-box post-media">
@@ -436,11 +435,11 @@
                                         <h4><a href="tech-single.html" title="">Evitar errores comunes en la protección contra ciberataques</a></h4>
                                         <small><a href="tech-single.html" title="">03 Julio, 2024</a></small>
                                         <small><a href="tech-author.html" title="">por Jessica</a></small>
-                                    </div><!-- end meta -->
-                                </div><!-- end shadow-desc -->
-                             </div><!-- end shadow -->
-                        </div><!-- end post-media -->
-                    </div><!-- end second-slot -->
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
         
                     <div class="last-slot">
                         <div class="masonry-box post-media">
@@ -452,12 +451,12 @@
                                         <h4><a href="tech-single.html" title="">Cómo elegir el sistema de cámaras de seguridad adecuado</a></h4>
                                         <small><a href="tech-single.html" title="">01 Julio, 2024</a></small>
                                         <small><a href="tech-author.html" title="">por Jessica</a></small>
-                                    </div><!-- end meta -->
-                                </div><!-- end shadow-desc -->
-                             </div><!-- end shadow -->
-                        </div><!-- end post-media -->
-                    </div><!-- end last-slot -->
-                </div><!-- end masonry -->
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -466,66 +465,53 @@
             <div class="container">
                 <div class="row">
                     <?php
-                        // Incluimos la conexión a la base de datos
                         include('conexion.php');
-
-                        // Definir cuántas noticias mostrar por página
                         $noticias_por_pagina = 8;
-
-                        // Obtener el número de página actual desde la URL (si no está definida, usamos la página 1)
                         $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-
-                        // Calcular el límite de resultados para la consulta (OFFSET y LIMIT)
                         $offset = ($pagina - 1) * $noticias_por_pagina;
-
-                        // Consultar las noticias, ordenadas por fecha de forma descendente
                         $query = "SELECT titulo, descripcion, fecha, ruta_imagen FROM sea_noticia ORDER BY fecha DESC LIMIT ?, ?";
                         $stmt = $mysqli->prepare($query);
-                        $stmt->bind_param("ii", $offset, $noticias_por_pagina); // Bindeamos los parámetros OFFSET y LIMIT
+                        $stmt->bind_param("ii", $offset, $noticias_por_pagina); 
                         $stmt->execute();
                         $resultado = $stmt->get_result();
-
                         ?>
 
                         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                             <div class="page-wrapper">
                                 <div class="blog-top clearfix">
                                     <h4 class="pull-left">Noticias Recientes <a href="#"><i class="fa fa-rss"></i></a></h4>
-                                </div><!-- end blog-top -->
-
+                                </div>
                                 <div class="blog-list clearfix">
                                 <?php
-                        if ($resultado->num_rows > 0) {
-                            while ($noticia = $resultado->fetch_assoc()) {
-                                echo '<div class="blog-box row">';
-                                echo '  <div class="col-md-4">';
-                                echo '    <div class="post-media">';
-                                echo '      <a href="tech-single.html" title="">';
-                                echo '        <img src="' . $noticia['ruta_imagen'] . '" alt="" class="img-fluid" style="width: 600px; height: 250px; object-fit: cover;">';  // Establecer el tamaño
-                                echo '        <div class="hovereffect"></div>';
-                                echo '      </a>';
-                                echo '    </div><!-- end media -->';
-                                echo '  </div><!-- end col -->';
-                                
-                                echo '  <div class="blog-meta big-meta col-md-8">';
-                                echo '    <h4><a href="tech-single.html" title="">' . $noticia['titulo'] . '</a></h4>';
-                                echo '    <p>' . $noticia['descripcion'] . '</p>';
-                                echo '    <small><a class="bg-orange" href="tech-category-01.html" title="">Seguridad</a></small>';
-                                echo '    <small><a href="tech-single.html" title="">' . $noticia['fecha'] . '</a></small>';
-                                echo '    <small><a href="tech-author.html" title="">por Autor</a></small>';
-                                echo '    <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>';
-                                echo '  </div><!-- end meta -->';
-                                echo '</div><!-- end blog-box -->';
-                                echo '<hr class="invis">';
-                            }
-                        } else {
-                            echo "<p>No hay noticias disponibles.</p>";
-                        }
-                        ?>
-
-
-                                </div><!-- end blog-list -->
-                            </div><!-- end page-wrapper -->
+                                    if ($resultado->num_rows > 0) {
+                                        while ($noticia = $resultado->fetch_assoc()) {
+                                            echo '<div class="blog-box row">';
+                                            echo '  <div class="col-md-4">';
+                                            echo '    <div class="post-media">';
+                                            echo '      <a href="tech-single.html" title="">';
+                                            echo '        <img src="' . $noticia['ruta_imagen'] . '" alt="" class="img-fluid" style="width: 600px; height: 250px; object-fit: cover;">'; 
+                                            echo '        <div class="hovereffect"></div>';
+                                            echo '      </a>';
+                                            echo '    </div>';
+                                            echo '  </div>';
+                                            
+                                            echo '  <div class="blog-meta big-meta col-md-8">';
+                                            echo '    <h4><a href="tech-single.html" title="">' . $noticia['titulo'] . '</a></h4>';
+                                            echo '    <p>' . $noticia['descripcion'] . '</p>';
+                                            echo '    <small><a class="bg-orange" href="tech-category-01.html" title="">Seguridad</a></small>';
+                                            echo '    <small><a href="tech-single.html" title="">' . $noticia['fecha'] . '</a></small>';
+                                            echo '    <small><a href="tech-author.html" title="">por Autor</a></small>';
+                                            echo '    <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>';
+                                            echo '  </div>';
+                                            echo '</div>';
+                                            echo '<hr class="invis">';
+                                        }
+                                    } else {
+                                        echo "<p>No hay noticias disponibles.</p>";
+                                    }
+                                    ?>
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
@@ -534,28 +520,22 @@
                                     <nav aria-label="Page navigation">
                                         <ul class="pagination justify-content-start">
                                             <?php
-                                            // Consultar el total de noticias para generar la paginación
                                             $query_total = "SELECT COUNT(*) AS total FROM sea_noticia";
                                             $result_total = $mysqli->query($query_total);
                                             $total_noticias = $result_total->fetch_assoc()['total'];
-
-                                            // Calcular el número total de páginas
                                             $total_paginas = ceil($total_noticias / $noticias_por_pagina);
-
-                                            // Mostrar los enlaces de paginación
                                             for ($i = 1; $i <= $total_paginas; $i++) {
                                                 echo "<li class='page-item'><a class='page-link' href='noticias.php?pagina=$i'>$i</a></li>";
                                             }
                                             ?>
                                         </ul>
                                     </nav>
-                                </div><!-- end col -->
-                            </div><!-- end row -->
-                        </div><!-- end col -->
+                                </div>
+                            </div>
+                        </div>
 
                     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <div class="sidebar">
-                            <!-- Banner -->
                             <div class="widget">
                                 <div class="banner-spot clearfix">
                                     <div class="banner-img">
@@ -574,12 +554,9 @@
                                     echo '    <h2 class="widget-title">Videos de Tendencia</h2>';
                                     echo '    <div class="trend-videos">';
 
-                                    // Iterar sobre los resultados
                                     while($row = $result->fetch_assoc()) {
                                         $titulo = $row['titulo'];
                                         $url_video = $row['ruta_imagen'];
-
-                                        // Generar el HTML para cada video, con iframe en lugar de imagen
                                         echo '        <div class="blog-box">';
                                         echo '            <div class="post-media">';
                                         echo '                <a href="' . $url_video . '" title="">';
@@ -608,8 +585,6 @@
                     
                             <?php
                                 include("conexion.php");
-
-                                // Consulta para obtener los artículos populares (más recientes)
                                 $sql = "SELECT titulo, ruta_imagen, fecha_publicacion FROM sea_blog ORDER BY fecha_publicacion DESC LIMIT 3";
                                 $result = $mysqli->query($sql);
 
@@ -618,14 +593,10 @@
                                     echo '    <h2 class="widget-title">Artículos Populares</h2>';
                                     echo '    <div class="blog-list-widget">';
                                     echo '        <div class="list-group">';
-
-                                    // Iterar sobre los resultados
                                     while($row = $result->fetch_assoc()) {
                                         $titulo = $row['titulo'];
                                         $ruta_imagen = $row['ruta_imagen'];
-                                        $fecha_publicacion = date("d M, Y", strtotime($row['fecha_publicacion'])); // Formato de la fecha
-
-                                        // Generar el HTML para cada artículo respetando la estructura proporcionada
+                                        $fecha_publicacion = date("d M, Y", strtotime($row['fecha_publicacion'])); 
                                         echo '            <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">';
                                         echo '                <div class="w-100 justify-content-between">';
                                         echo '                    <img src="' . $ruta_imagen . '" alt="' . $titulo . '" class="img-fluid float-left">';
@@ -644,10 +615,8 @@
 
                                 $mysqli->close();
                                 ?>
-
-                            <!-- Recent Reviews Section -->
                             <div class="widget">
-                                <h2 class="widget-title">Reseñas Recientes</h2>
+                                <h2 class="widget-title">Articulos Recientes</h2>
                                 <div class="blog-list-widget">
                                     <div class="list-group">
                                         <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -694,8 +663,6 @@
                                     </div>
                                 </div>
                             </div>
-                    
-                            <!-- Follow Us Section -->
                             <div class="widget">
                                 <h2 class="widget-title">Síguenos</h2>
                     
@@ -729,8 +696,6 @@
                                     </div>
                                 </div>
                             </div>
-                    
-                            <!-- Another Banner -->
                             <div class="widget">
                                 <div class="banner-spot clearfix">
                                     <div class="banner-img">
@@ -740,9 +705,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                </div><!-- end row -->
-            </div><!-- end container -->
+                </div>
+            </div>
         </section>
 
         <footer class="footer">
@@ -751,7 +715,7 @@
                     <div class="col-lg-7">
                         <div class="widget">
                             <div class="footer-text text-left">
-                                <a href="index.html"><h1 class="text-white">SEGURIDAD en <b>ACCIÓN</b></h1></a>
+                                <a href="index.php"><h1 class="text-white">SEGURIDAD en <b>ACCIÓN</b></h1></a>
                                 <p>Este es un blog dedicado a la seguridad corporativa, compartiendo artículos sobre protección de datos, seguridad cibernética y mejores prácticas para empresas.</p>
                                 <div class="social">
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
@@ -768,10 +732,10 @@
                                         <input type="text" class="form-control" placeholder="Introduce tu dirección de correo electrónico">
                                         <button type="submit" class="btn btn-primary">ENVIAR</button>
                                     </form>
-                                </div><!-- end newsletter -->
-                            </div><!-- end footer-text -->
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         
                     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <div class="widget">
@@ -784,9 +748,9 @@
                                     <li><a href="#">Amenazas Cibernéticas <span>(22)</span></a></li>
                                     <li><a href="#">Compliance & Regulaciones <span>(66)</span></a></li>
                                 </ul>
-                            </div><!-- end link-widget -->
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
         
                     <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                         <div class="widget">
@@ -799,9 +763,9 @@
                                     <li><a href="#">Aviso Legal</a></li>
                                     <li><a href="#">Licencia y Ayuda</a></li>
                                 </ul>
-                            </div><!-- end link-widget -->
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
         
                 <div class="row">
@@ -810,13 +774,13 @@
                         <div class="copyright">&copy; Blog de Seguridad Corporativa.  </div>
                     </div>
                 </div>
-            </div><!-- end container -->
-        </footer><!-- end footer -->
+            </div>
+        </footer>
         
 
         <div class="dmtop"></div>
         
-    </div><!-- end wrapper -->
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

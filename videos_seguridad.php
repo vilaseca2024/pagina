@@ -18,6 +18,7 @@
 <link href="css/colors.css" rel="stylesheet">
 <link href="css/version/tech.css" rel="stylesheet">
 
+
 </head>
 <body>
 
@@ -28,11 +29,11 @@
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand mt-2 mb-2" href="index.html">SEGURIDAD en <b>ACCIÓN</b></a>
+                    <a class="navbar-brand mt-2 mb-2" href="index.php">SEGURIDAD en <b>ACCIÓN</b></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Inicio</a>
+                                <a class="nav-link" href="index.php">Inicio</a>
                             </li>
                             <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ultimas Noticias</a>
@@ -376,19 +377,19 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-01.html">Seguridad Corporativa</a>
+                                <a class="nav-link" href="noticias_seguridad.php">Seguridad Corporativa</a>
                             </li>                   
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-02.html">Videos</a>
+                                <a class="nav-link" href="videos_seguridad.php">Videos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-03.html">Reseñas y Articulos</a>
+                                <a class="nav-link" href="articulos_seguridad.php">Reseñas y Articulos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="trasmisiones.php">Trasmisiones en Linea</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-contact.html">Contáctanos</a>
+                                <a class="nav-link" href="contactos.php">Contáctanos</a>
                             </li>
                             
                         </ul>
@@ -412,12 +413,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <h2><i class="fa fa-envelope-open-o bg-orange"></i> Contáctanos <small class="hidden-xs-down hidden-sm-down">Estamos aquí para ayudarte con todas tus necesidades de seguridad corporativa.</small></h2>
+                        <h2><i class="fa fa-play bg-orange"></i> Videos sobre Seguridad Cultural <small class="hidden-xs-down hidden-sm-down">Descubre los esfuerzos globales en seguridad patrimonial y la protección de nuestro legado histórico.</small></h2>
                     </div><!-- end col -->
                     <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                            <li class="breadcrumb-item active">Contacto</li>
+                            <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                            <li class="breadcrumb-item active">Videos</li>
                         </ol>
                     </div><!-- end col -->                    
                 </div><!-- end row -->
@@ -425,53 +427,323 @@
         </div><!-- end page-title -->
         
 
-        <section class="section wb">
+        <section class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                         <div class="page-wrapper">
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <h4>¿Quiénes somos?</h4>
-                                    <p>Somos una empresa dedicada a la seguridad corporativa, ofreciendo soluciones innovadoras y personalizadas para proteger tus activos y garantizar la seguridad de tu infraestructura empresarial.</p>
-                       
-                                    <h4>¿Cómo ayudamos?</h4>
-                                    <p>Proporcionamos consultoría experta, implementamos sistemas de seguridad avanzados y diseñamos estrategias de protección adaptadas a las necesidades específicas de tu empresa, asegurando un entorno seguro y protegido para tu equipo y recursos.</p>
-                         
-                                    <h4>Pregunta antes de la compra</h4>
-                                    <p>Si tienes alguna duda o necesitas más información sobre nuestros servicios de seguridad, no dudes en contactarnos. Estamos aquí para ayudarte a tomar decisiones informadas y a proteger lo que más importa.</p>
-                                </div>
-                                <div class="col-lg-7">
-                                    <form class="form-wrapper">
-                                        <input type="text" class="form-control" placeholder="Tu nombre">
-                                        <input type="text" class="form-control" placeholder="Dirección de correo electrónico">
-                                        <input type="text" class="form-control" placeholder="Teléfono">
-                                        <input type="text" class="form-control" placeholder="Asunto">
-                                        <textarea class="form-control" placeholder="Tu mensaje"></textarea>
-                                        <button type="submit" class="btn btn-primary">Enviar <i class="fa fa-envelope-open-o"></i></button>
-                                    </form>
-                                </div>
-                            </div>
+                            <div class="blog-custom-build">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="tech-single.html" title="">
+                                            <img src="upload/tech_menu_20.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span class="videohover"></span>
+                                            </div>
+                                            <!-- end hover -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+                                    <div class="blog-meta big-meta text-center">
+                                        <div class="post-sharing">
+                                            <ul class="list-inline">
+                                                <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Compartir en Facebook</span></a></li>
+                                                <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Compartir en Twitter</span></a></li>
+                                                <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!-- end post-sharing -->
+                                        <h4><a href="tech-single.html" title="">Reglas esenciales para una seguridad corporativa efectiva</a></h4>
+                                        <p>Implementar protocolos de seguridad adecuados es crucial para proteger los datos de la empresa y garantizar un ambiente de trabajo seguro. Conoce las mejores prácticas que cada organización debe adoptar para protegerse contra amenazas internas y externas.</p>
+                                        <small><a href="tech-category.html" title="">Seguridad</a></small>
+                                        <small><a href="tech-single.html" title="">10 de febrero, 2025</a></small>
+                                        <small><a href="tech-author.html" title="">por Equipo de Seguridad</a></small>
+                                        <small><a href="#" title=""><i class="fa fa-eye"></i> 305</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end blog-box -->
+                        
+                                <hr class="invis">
+                        
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="tech-single.html" title="">
+                                            <img src="upload/tech_menu_19.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span class="videohover"></span>
+                                            </div>
+                                            <!-- end hover -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+                                    <div class="blog-meta big-meta text-center">
+                                        <div class="post-sharing">
+                                            <ul class="list-inline">
+                                                <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Compartir en Facebook</span></a></li>
+                                                <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Compartir en Twitter</span></a></li>
+                                                <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!-- end post-sharing -->
+                                        <h4><a href="tech-single.html" title="">Cómo prevenir las brechas de seguridad de datos en tu empresa</a></h4>
+                                        <p>Las brechas de seguridad de datos pueden tener efectos devastadores en la reputación de una empresa. Descubre cómo establecer medidas robustas de seguridad para prevenir el acceso no autorizado a información confidencial.</p>
+                                        <small><a href="tech-category.html" title="">Ciberseguridad</a></small>
+                                        <small><a href="tech-single.html" title="">10 de febrero, 2025</a></small>
+                                        <small><a href="tech-author.html" title="">por Especialista en Ciberseguridad</a></small>
+                                        <small><a href="#" title=""><i class="fa fa-eye"></i> 438</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end blog-box -->
+                        
+                                <hr class="invis">
+                        
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="tech-single.html" title="">
+                                            <img src="upload/tech_menu_18.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span class="videohover"></span>
+                                            </div>
+                                            <!-- end hover -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+                                    <div class="blog-meta big-meta text-center">
+                                        <div class="post-sharing">
+                                            <ul class="list-inline">
+                                                <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Compartir en Facebook</span></a></li>
+                                                <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Compartir en Twitter</span></a></li>
+                                                <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!-- end post-sharing -->
+                                        <h4><a href="tech-single.html" title="">Cómo crear una cultura de seguridad en tu lugar de trabajo</a></h4>
+                                        <p>Una cultura de seguridad sólida ayuda a reducir el riesgo de accidentes y mejora la productividad. Aprende cómo crear un ambiente de trabajo donde la seguridad sea una prioridad para todos los empleados.</p>
+                                        <small><a href="tech-category.html" title="">Seguridad Laboral</a></small>
+                                        <small><a href="tech-single.html" title="">10 de febrero, 2025</a></small>
+                                        <small><a href="tech-author.html" title="">por Consultor en Seguridad</a></small>
+                                        <small><a href="#" title=""><i class="fa fa-eye"></i> 389</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end blog-box -->
+                            </div><!-- end blog-custom-build -->
                         </div><!-- end page-wrapper -->
+                        
+                        <hr class="invis">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
                     </div><!-- end col -->
-                </div><!-- end row -->
+
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sidebar">
+                            <div class="widget">
+                                <div class="banner-spot clearfix">
+                                    <div class="banner-img">
+                                        <img src="upload/banner_07.jpg" alt="" class="img-fluid">
+                                    </div><!-- end banner-img -->
+                                </div><!-- end banner -->
+                            </div><!-- end widget -->
+
+                            <div class="widget">
+                                <h2 class="widget-title">Videos de Seguridad Corporativa</h2>
+                                <div class="trend-videos">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="tech-single.html" title="">
+                                                <img src="upload/tech_video_01.jpg" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span class="videohover"></span>
+                                                </div><!-- end hover -->
+                                            </a>
+                                        </div><!-- end media -->
+                                        <div class="blog-meta">
+                                            <h4><a href="tech-single.html" title="">Mejores prácticas para proteger los datos empresariales</a></h4>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+                            
+                                    <hr class="invis">
+                            
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="tech-single.html" title="">
+                                                <img src="upload/tech_video_02.jpg" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span class="videohover"></span>
+                                                </div><!-- end hover -->
+                                            </a>
+                                        </div><!-- end media -->
+                                        <div class="blog-meta">
+                                            <h4><a href="tech-single.html" title="">Entrevista con un experto en ciberseguridad empresarial</a></h4>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+                            
+                                    <hr class="invis">
+                            
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="tech-single.html" title="">
+                                                <img src="upload/tech_video_03.jpg" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span class="videohover"></span>
+                                                </div><!-- end hover -->
+                                            </a>
+                                        </div><!-- end media -->
+                                        <div class="blog-meta">
+                                            <h4><a href="tech-single.html" title="">Cómo implementar sistemas de monitoreo inteligente para la seguridad empresarial</a></h4>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+                                </div><!-- end videos -->
+                            </div><!-- end widget -->
+                            
+                            <div class="widget">
+                                <h2 class="widget-title">Publicaciones Populares</h2>
+                                <div class="blog-list-widget">
+                                    <div class="list-group">
+                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="upload/tech_blog_08.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">5 estrategias clave para proteger los datos empresariales</h5>
+                                                <small>12 Ene, 2025</small>
+                                            </div>
+                                        </a>
+                            
+                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="upload/tech_blog_01.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">Cómo garantizar la privacidad en la nube corporativa</h5>
+                                                <small>11 Ene, 2025</small>
+                                            </div>
+                                        </a>
+                            
+                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 last-item justify-content-between">
+                                                <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">¿Estás preparado para un ciberataque en tu empresa?</h5>
+                                                <small>07 Ene, 2025</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- end blog-list -->
+                            </div><!-- end widget -->
+                            
+                            <div class="widget">
+                                <h2 class="widget-title">Reseñas Recientes</h2>
+                                <div class="blog-list-widget">
+                                    <div class="list-group">
+                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="upload/tech_blog_02.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">La mejor estrategia para proteger tus redes internas</h5>
+                                                <span class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                            
+                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">10 formas de mejorar la ciberseguridad en tu empresa</h5>
+                                                <span class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                            
+                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 last-item justify-content-between">
+                                                <img src="upload/tech_blog_07.jpg" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">Cómo crear un plan de recuperación ante desastres cibernéticos</h5>
+                                                <span class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- end blog-list -->
+                            </div><!-- end widget -->
+                            
+                            <div class="widget">
+                                <h2 class="widget-title">Síguenos</h2>
+                            
+                                <div class="row text-center">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button facebook-button">
+                                            <i class="fa fa-facebook"></i>
+                                            <p>27k</p>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button twitter-button">
+                                            <i class="fa fa-twitter"></i>
+                                            <p>98k</p>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button google-button">
+                                            <i class="fa fa-google-plus"></i>
+                                            <p>17k</p>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button youtube-button">
+                                            <i class="fa fa-youtube"></i>
+                                            <p>22k</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- end widget -->
+                            
+                            <div class="widget">
+                                <div class="banner-spot clearfix">
+                                    <div class="banner-img">
+                                        <img src="upload/banner_03.jpg" alt="Protección de datos en la nube" class="img-fluid">
+                                    </div><!-- end banner-img -->
+                                </div><!-- end banner -->
+                            </div><!-- end widget -->
+                            
+                        </div><!-- end sidebar -->
+                    </div><!-- end col -->
+                </div>
             </div><!-- end container -->
         </section>
-      
+       
         <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="widget">
                             <div class="footer-text text-left">
-                                <a href="index.html"><h1 class="text-white">SEGURIDAD en <b>ACCIÓN</b></h1></a>
+                                <a href="index.php"><h1 class="text-white">SEGURIDAD en <b>ACCIÓN</b></h1></a>
                                 <p>Este es un blog dedicado a la seguridad corporativa, compartiendo artículos sobre protección de datos, seguridad cibernética y mejores prácticas para empresas.</p>
                                 <div class="social">
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-                                     
+                                   
                                 </div>
         
                                 <hr class="invis">
